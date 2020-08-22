@@ -2,25 +2,23 @@ import React from 'react';
 import './CharactersList.css';
 import Api from '../../API';
 import Character from '../Character';
-
-export default class CharactersList extends React.Component {
+import { connect } from 'react-redux';
+import Spinner from '../Spinner';
+class CharactersList extends React.Component {
 
     rickMortyApi = new Api();
 
-    state = {
-        characters: [],
-        
-    }
     
     componentDidMount() {
         this.rickMortyApi.getAllCharacters()
-            .then((data) => this.setState({
-                characters: data
-            }));
-    }
+            .then((data) => {
+                this.props.setCharacters(data)
+            });
+    };
+    
     
     render() {
-        const { characters } = this.state;
+        const { characters } = this.props;
 
         const items = characters.map((item) => {
             return (
@@ -38,7 +36,9 @@ export default class CharactersList extends React.Component {
                 </li>
             );
         });
-
+        if(characters.length) {
+            return <Spinner />
+        }
         return (
             <div className="CharactersList">
                 <h1>Characters</h1>
@@ -49,3 +49,13 @@ export default class CharactersList extends React.Component {
         );
     }
 }
+const mapStateToProps = (state) => ({
+    characters: state.characters 
+})
+const mapDispatchToProps = (dispatch) =>({
+    setCharacters: (data) => dispatch({
+        type: 'IS_CHARACTERS',
+        payload: data
+    })
+})
+export default connect(mapStateToProps, mapDispatchToProps)(CharactersList);
