@@ -1,3 +1,11 @@
 .Nav a:not(:last-child) { 
     margin-right:10px;
+    
+}
+
+.Nav a {
+    text-decoration: none;
+    color:rgb(255, 152, 0);
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
 }
