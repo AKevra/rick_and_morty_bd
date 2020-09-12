@@ -2,6 +2,10 @@
     margin-right:10px;
     
 }
+.Nav a:last-child { 
+    margin-right:1.5rem;
+    
+}
 
 .Nav a {
     text-decoration: none;

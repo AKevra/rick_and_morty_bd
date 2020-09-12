@@ -5,6 +5,8 @@ import CharactersList from '../CharactersList';
 import {  BrowserRouter, Switch, Route } from 'react-router-dom';
 import EpisodesList from '../EpisodesList';
 import CharacterPage from '../CharacterPage';
+import EpisodePage from '../EpisodePage';
+
 
 const App = () => {
     return (
@@ -20,6 +22,9 @@ const App = () => {
                     </Route>
                     <Route path={`/character/:id`}>
                         < CharacterPage />
+                    </Route>
+                    <Route path={`/episode/:id`}>
+                        < EpisodePage />
                     </Route>
                 </Switch>
                

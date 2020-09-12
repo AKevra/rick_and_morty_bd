@@ -39,4 +39,16 @@ export default class Api {
         this.instance.defaults.baseURL = "https://rickandmortyapi.com/api/";
         return result
     }
+    getEpisodesInfoByPage = async (pageNumber) => {
+        const response = pageNumber
+          ? await this.instance.get(`episode?page=${pageNumber}`)
+          : await this.instance.get("episode");
+        const result = response.data;
+        return result;
+    };
+    getEpisode = async (id) => {
+        const response = await this.instance.get(`episode/${id}`);
+        const result = response.data;
+        return result;
+    }
 }

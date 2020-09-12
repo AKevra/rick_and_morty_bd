@@ -1,7 +1,7 @@
 ul {
     list-style: none;
-    display: inline-block;
     justify-content: space-between;
+    padding:1.5rem; 
 }
 .CharactersList {
     display: flex;
@@ -18,10 +18,11 @@ ul {
     padding: 0.5%;
    
 }
-.CharactersList h1 {
+h1 {
     font-family: 'Bangers', cursive;
     font-weight: bold;
     font-size: 6rem;
     color: white;
+    text-align: center;
 }
     
