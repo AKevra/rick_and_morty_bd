@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Api from '../../API';
+import CharactersList from '../CharactersList/CharactersList';
+import { connect } from 'react-redux';
 
-const EpisodePage = () => {
+
+const EpisodePage = (characters) => {
 
     const rickMortyApi = new Api();
 
@@ -12,7 +15,11 @@ const EpisodePage = () => {
     const [name, setName] = useState();
     const [air_date, setData] = useState();
     const [episode, setEpisode] = useState();
-    const [characters, setEpCharacters] = useState([]);
+    const [charactersLinks, setEpCharactersLinks] = useState([]);
+    const [characterName, setCharacterName]= useState();
+       
+
+    
 
     useEffect(() =>  {
         async function getEpisode(id) {
@@ -20,19 +27,47 @@ const EpisodePage = () => {
             setName(episode.name);
             setData(episode.air_date);
             setEpisode(episode.episode);
-            setEpCharacters(episode.characters);
+            setEpCharactersLinks(episode.characters);
             
 
         }
 
         getEpisode(id);
     }, [id, rickMortyApi]);
-    
+
+    let episodeCharacter = charactersLinks.map((item) => {
+        const arr = item.split("/");
+        let characterId = arr[arr.length - 1];
+        
+        return (
+            <li className="one_character" key={characterId} >
+                <Link  to={`/character/${characterId}`}>
+                    <p>Герои </p>
+                </Link>    
+            </li>
+            
+        );
+    });
 
     
 
+  
+   
+    useEffect(() =>  {
+       
+        async function getCharacter(characterId) {
+            const character = await rickMortyApi.getCharacter(characterId);
+            console.log(character);
+            const result = character.name;
+            console.log(result);
+        return  result;
     
+        }
 
+        getCharacter(id);
+    }, [id, rickMortyApi]);
+
+  
     return(
         
         <div className="EpisodePage">
@@ -41,12 +76,21 @@ const EpisodePage = () => {
                 <div>{air_date}</div>
                 <div>{episode} </div>
                 <ul>
-                    {characters[0]}
+                {episodeCharacter}
+                    
                 </ul>
-               
             </div>
+          
         </div>
     );
 }
+const mapStateToProps = (state) => {
+    return {
+        characters: state.characters
+    }
+}
 
-export default EpisodePage;
+export default connect(mapStateToProps)(EpisodePage);
+
+
+/**/

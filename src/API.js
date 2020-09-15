@@ -51,4 +51,16 @@ export default class Api {
         const result = response.data;
         return result;
     }
+    getLocationsInfoByPage = async (pageNumber) => {
+        const response = pageNumber
+          ? await this.instance.get(`location?page=${pageNumber}`)
+          : await this.instance.get("location");
+        const result = response.data;
+        return result;
+    };
+    getLocation = async (id) => {
+        const response = await this.instance.get(`location/${id}`);
+        const result = response.data;
+        return result;
+    }
 }

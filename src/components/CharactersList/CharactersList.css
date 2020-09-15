@@ -1,7 +1,8 @@
 ul {
     list-style: none;
     justify-content: space-between;
-    padding:1.5rem; 
+    padding:1.5rem;
+    padding-inline-start: 40px; 
 }
 .CharactersList {
     display: flex;
@@ -11,6 +12,9 @@ ul {
     align-items: center;
     flex-wrap: wrap;
     max-width: 1920px;
+}
+.CharactersList ul {
+    margin: 0;
 }
 .one_character {
     display: inline-block;

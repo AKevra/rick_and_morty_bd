@@ -2,7 +2,7 @@ import Api from "../API";
 
 const rickMortyApi = new Api();
 
-export const setEpisodesThunk = (pageUrl = null) => {
+export const setLocationsThunk = (pageUrl = null) => {
   let pageNumber = null;
 
   if (pageUrl) {
@@ -12,15 +12,15 @@ export const setEpisodesThunk = (pageUrl = null) => {
 
   return function (dispatch) {
      rickMortyApi
-      .getEpisodesInfoByPage(pageNumber)
+      .getLocationsInfoByPage(pageNumber)
       .then(async (data) => {
-        const episodes = data.results;
+        const locations = data.results;
         const responseInfoObj = data.info;
 
         dispatch({
-          type: "IS_EPISODES",
+          type: "IS_LOCATIONS",
           payload: {
-            episodes,
+            locations,
             paginator: {
               prevPageUrl: responseInfoObj.prev,
               nextPageUrl: responseInfoObj.next,
@@ -32,4 +32,4 @@ export const setEpisodesThunk = (pageUrl = null) => {
       });
   };
 };
-export default setEpisodesThunk;
+export default setLocationsThunk;

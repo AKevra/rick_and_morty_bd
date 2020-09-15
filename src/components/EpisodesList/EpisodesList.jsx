@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import setEpisodesThunk from "../../actions/setEpisodesAction";
 import Episode from "../Episode";
 import Paginator from "../Paginator";
 import './EpisodeList.css';
@@ -27,7 +28,8 @@ class EpisodesList extends React.Component {
           <h1>Episode List</h1>
           <ul>{items}</ul>
         </div>
-        <Paginator />
+        <Paginator 
+          paginatorType = {setEpisodesThunk}/>
       </>
     );
   }

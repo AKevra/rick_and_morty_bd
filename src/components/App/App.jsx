@@ -6,6 +6,8 @@ import {  BrowserRouter, Switch, Route } from 'react-router-dom';
 import EpisodesList from '../EpisodesList';
 import CharacterPage from '../CharacterPage';
 import EpisodePage from '../EpisodePage';
+import LocationList from '../LocationList';
+import LocationPage from '../LocationPage/LocationPage';
 
 
 const App = () => {
@@ -20,12 +22,19 @@ const App = () => {
                     <Route path='/episodes'>
                         < EpisodesList />
                     </Route>
+                    <Route path={`/locations`}>
+                         <LocationList />
+                    </Route>
+                    <Route path={`/location/:id`}>
+                        < LocationPage />
+                    </Route>
                     <Route path={`/character/:id`}>
                         < CharacterPage />
                     </Route>
                     <Route path={`/episode/:id`}>
                         < EpisodePage />
                     </Route>
+                    
                 </Switch>
                
             </div>

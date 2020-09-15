@@ -4,12 +4,14 @@ import Character from '../Character';
 import { connect } from 'react-redux';
 import Spinner from '../Spinner';
 import Paginator from '../Paginator';
+import setCharactersThunk from '../../actions/setCharectersAction';
 
 class CharactersList extends React.Component {
     
 
     render() {
         const { characters } = this.props;
+        console.log(characters);
         
 
         const items = characters.map((item) => {
@@ -42,7 +44,8 @@ class CharactersList extends React.Component {
                         {items}
                     </ul>
                 </div>
-                <Paginator />
+                <Paginator 
+                    paginatorType = {setCharactersThunk}/>
             </>
            
             
