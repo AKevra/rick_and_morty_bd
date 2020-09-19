@@ -8,7 +8,6 @@ import setLocationsThunk from "../../actions/setLocationsThunk";
 class LocationList extends React.Component {
   render() {
     const { locations } = this.props;
-    console.log(locations);
     const items = locations.map((item) => {
       return (
         <li className="one_location" key={item.id}>

@@ -8,6 +8,8 @@ import CharacterPage from '../CharacterPage';
 import EpisodePage from '../EpisodePage';
 import LocationList from '../LocationList';
 import LocationPage from '../LocationPage/LocationPage';
+import MainPage from '../MainPage';
+
 
 
 const App = () => {
@@ -36,6 +38,10 @@ const App = () => {
                     </Route>
                     
                 </Switch>
+                <div className="start_page">
+                    <MainPage />
+                 </div>
+              
                
             </div>
         </BrowserRouter>

@@ -8,7 +8,6 @@ import './EpisodeList.css';
 class EpisodesList extends React.Component {
   render() {
     const { episodes } = this.props;
-    console.log(episodes);
     const items = episodes.map((item) => {
       return (
         <li className="one_episode" key={item.id}>

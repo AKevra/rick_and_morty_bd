@@ -16,7 +16,9 @@ const Header = () => {
             <div className="nav_block">
                 < Nav/>
                 
+                
             </div>
+           
         </div>
     );
 }

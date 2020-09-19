@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import Api from '../../API';
+import FiltrEpisodes from '../../components/FiltrEpisodes';
+import './CharacterPage.css';
 
 const CharacterPage = () => {
 
@@ -12,6 +14,8 @@ const CharacterPage = () => {
     const [gender, setGender] = useState();
     const [image, setImage] = useState();
     const [species, setSpecies] = useState();
+    const [originName, setOriginName] = useState();
+    const [episodes, setEpisodes] = useState();
 
     useEffect(() =>  {
         async function getCharacter(id) {
@@ -20,6 +24,14 @@ const CharacterPage = () => {
             setGender(character.gender);
             setImage(character.image);
             setSpecies(character.species);
+            setOriginName(character.origin.name);
+
+            let episodesLinkArr = character.episode.map((item, index) => {
+                const arr = item.split("/");
+                id = arr[arr.length - 1];
+                return < FiltrEpisodes id={id} key={index} />;
+            });
+              setEpisodes(episodesLinkArr);
         }
 
         getCharacter(id);
@@ -29,14 +41,42 @@ const CharacterPage = () => {
     return(
         
         <div className="CharacterPage">
-            <h1>{name}</h1>
-            <div className="characterBlock">
-                <div>{gender}</div>
-                <div><img src={image} alt={`${name}`} /></div>
-                <div>{species}</div>
-            </div>
+                <div className="characterInf">
+                    <img src={image} alt={name}/>
+                    <div className="titleBlock">
+                        <p className="name">
+                                {name}
+                        </p>
+                        <span className="species">{species}</span>
+                        <span className="gender">{gender}</span>
+                        <div className="locationBlock">
+                            <p className="title">Current location</p>
+                            <p className="location">{originName}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div className="textBlock">
+                    
+                    <div className="firstSeenBlock">
+                       
+                        <div className="firstEpisode">
+                        <p className="title">Episodes:</p>
+                        <ul>
+                            {episodes}
+                        </ul>
+                        
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            
         </div>
     );
 }
 
-export default CharacterPage;
+  
+  export default CharacterPage;
