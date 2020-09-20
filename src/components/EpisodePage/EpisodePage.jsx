@@ -46,7 +46,10 @@ const EpisodePage = (characters) => {
         </div>
         <div className="episodeCharactersBlock">
              <p className="title">Characters from Episode:</p>
-            {charactersLinks}
+             <ul>
+             {charactersLinks}
+             </ul>
+            
         </div>
       </div>
     </div>

@@ -8,6 +8,8 @@ const Paginator = (props) => {
     currentPage,
     getNextPage,
     getPrevPage,
+    pageCount,
+
   } = props;
 
  
@@ -18,7 +20,8 @@ const Paginator = (props) => {
       {prevPageUrl && (
         <button onClick={() => getPrevPage(prevPageUrl)}>prevBtn</button>
       )}
-      <span>{currentPage}</span>
+       <span>{currentPage} of {pageCount}</span>
+      
       {nextPageUrl && (
         <button onClick={() => getNextPage(nextPageUrl)}>nextBtn</button>
       )}

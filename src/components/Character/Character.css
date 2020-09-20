@@ -1,26 +1,31 @@
 .Character {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
     background: rgb(32, 35, 41);
     
     
 }
 .imgBlock {
     width: 30%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content:center;
+    align-items: center;
   
 
 }
 .imgBlock img {
     border-radius:40%;
-    max-width: 100%;
+    width: 90%;
+    height: 100%;
     opacity: 1;
     object-position: center center;
-    object-fit: cover;
     margin: 0.5%;
     transition: opacity 0.5s ease 0s;
-    padding: 2%;
+    padding: 10%;
     
 }
 .textBlock {
@@ -41,8 +46,7 @@
 }
 .textBlock {
     color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
+    text-align: center;
     flex: 3 1 0%;
     padding: 0.75rem;
 }
@@ -52,6 +56,9 @@
     font-weight: bold;
     font-size: 1.6rem;
     color:rgb(255, 152, 0);
+}
+.titleBlock a:hover {
+    color: white;
 }
 .title {
     font-family: 'Roboto', cursive;

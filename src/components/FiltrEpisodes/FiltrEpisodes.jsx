@@ -25,12 +25,12 @@ const FiltrEpisodes = (props) => {
     }, [id, rickMortyApi]);
   
     return (
-      <li className="FiltrEpisodes">
+      <div className="FiltrEpisodes">
             <Link className="nameLink" to={`/episode/${id}`}>
                 {name}
             </Link> 
     
-      </li >
+      </div >
     );
   };
   

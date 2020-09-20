@@ -1,6 +1,7 @@
 .FiltrCharacters  {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .FiltrCharacters a {
     text-decoration: none;
@@ -11,5 +12,7 @@
 }
 .FiltrCharacters .imgBlock  {
     padding: 1rem;
+    width: 80px;
+    height: 80px;
 }
 

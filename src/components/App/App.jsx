@@ -18,6 +18,9 @@ const App = () => {
              <div className="App">
                 <Header />
                 <Switch>
+                    <Route exact path="/">
+                        <MainPage/>
+                    </Route>
                     <Route path='/characters'>
                         <CharactersList />
                     </Route>
@@ -38,10 +41,7 @@ const App = () => {
                     </Route>
                     
                 </Switch>
-                <div className="start_page">
-                    <MainPage />
-                 </div>
-              
+               
                
             </div>
         </BrowserRouter>

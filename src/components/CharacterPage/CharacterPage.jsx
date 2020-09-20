@@ -53,21 +53,13 @@ const CharacterPage = () => {
                             <p className="title">Current location</p>
                             <p className="location">{originName}</p>
                         </div>
+                        <p className="title">Episodes:</p>
                     </div>
                     
                 </div>
-                <div className="textBlock">
-                    
-                    <div className="firstSeenBlock">
-                       
-                        <div className="firstEpisode">
-                        <p className="title">Episodes:</p>
-                        <ul>
-                            {episodes}
-                        </ul>
-                        
-                        </div>
-                    </div>
+                <div className="episodesBlock"> 
+                        {episodes}
+
                 </div>
 
 

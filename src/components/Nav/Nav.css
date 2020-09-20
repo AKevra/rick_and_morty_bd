@@ -13,3 +13,13 @@
     font-family: 'Fredoka One', cursive;
     font-size: 1.5rem;
 }
+
+.Nav a:visited{
+    color:rgb(255, 152, 0);
+}
+.Nav a:hover{
+    color: white;
+}
+.Nav a:focus{
+    color: white;
+}
