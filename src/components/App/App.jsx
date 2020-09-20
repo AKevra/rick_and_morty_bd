@@ -21,6 +21,9 @@ const App = () => {
                     <Route exact path="/">
                         <MainPage/>
                     </Route>
+                    <Route path="/rick_and_morty_bd">
+                        <MainPage/>
+                    </Route>
                     <Route path='/characters'>
                         <CharactersList />
                     </Route>
