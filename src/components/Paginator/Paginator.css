@@ -1,0 +1,27 @@
+.Paginator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Paginator button {
+    color:rgb(255, 152, 0);
+    font-family: 'Fredoka One', cursive;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: hsla(0,0%,0%,0.8);
+}
+.Paginator span {
+    color: white;
+    padding: 1rem;
+}
+
+.Paginator button:focus {
+    outline: none;
+}
+
+.Paginator button:hover {
+    color: white;
+}

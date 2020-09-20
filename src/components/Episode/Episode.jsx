@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './Episode.css';
+import episodeIcon from '../../img/play-button.png';
 
 export default class Episode extends React.Component {
   render() {
@@ -9,7 +10,9 @@ export default class Episode extends React.Component {
     return (
       <div className="Episode">
         <div className="titleBlock">
+            
           <p className="name">
+              <img src={episodeIcon} alt={episodeNumber}/>
               <Link className="nameLink" to={`/episode/${id}`}>
                   {name}
               </Link>

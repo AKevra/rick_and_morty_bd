@@ -50,7 +50,9 @@ const LocationPage = (characters) => {
           </div>
           <div className="residents Block">
               <p className="title">Location residents</p>
-              <div className="residentsLocation">{residents}</div>
+              <div className="residentsLocation">
+                  {residents}
+                </div>
           </div>
           
         </div>

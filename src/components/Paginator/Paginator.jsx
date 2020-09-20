@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import './Paginator.css';
 
 const Paginator = (props) => {
   const {
