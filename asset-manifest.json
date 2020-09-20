@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/rick_and_morty_bd/static/css/main.9fe49c5f.chunk.css",
-    "main.js": "/rick_and_morty_bd/static/js/main.fd0e1909.chunk.js",
-    "main.js.map": "/rick_and_morty_bd/static/js/main.fd0e1909.chunk.js.map",
+    "main.css": "/rick_and_morty_bd/static/css/main.e650577d.chunk.css",
+    "main.js": "/rick_and_morty_bd/static/js/main.e9ac77e4.chunk.js",
+    "main.js.map": "/rick_and_morty_bd/static/js/main.e9ac77e4.chunk.js.map",
     "runtime-main.js": "/rick_and_morty_bd/static/js/runtime-main.4f9f685a.js",
     "runtime-main.js.map": "/rick_and_morty_bd/static/js/runtime-main.4f9f685a.js.map",
-    "static/js/2.e778f608.chunk.js": "/rick_and_morty_bd/static/js/2.e778f608.chunk.js",
-    "static/js/2.e778f608.chunk.js.map": "/rick_and_morty_bd/static/js/2.e778f608.chunk.js.map",
+    "static/js/2.213f4e41.chunk.js": "/rick_and_morty_bd/static/js/2.213f4e41.chunk.js",
+    "static/js/2.213f4e41.chunk.js.map": "/rick_and_morty_bd/static/js/2.213f4e41.chunk.js.map",
     "index.html": "/rick_and_morty_bd/index.html",
-    "precache-manifest.09e98a4740e559862d2c1b05f075d970.js": "/rick_and_morty_bd/precache-manifest.09e98a4740e559862d2c1b05f075d970.js",
+    "precache-manifest.181e42fadc67d299b1432815e6a08ddd.js": "/rick_and_morty_bd/precache-manifest.181e42fadc67d299b1432815e6a08ddd.js",
     "service-worker.js": "/rick_and_morty_bd/service-worker.js",
-    "static/css/main.9fe49c5f.chunk.css.map": "/rick_and_morty_bd/static/css/main.9fe49c5f.chunk.css.map",
-    "static/js/2.e778f608.chunk.js.LICENSE.txt": "/rick_and_morty_bd/static/js/2.e778f608.chunk.js.LICENSE.txt",
-    "static/media/RickMorty.jpg": "/rick_and_morty_bd/static/media/RickMorty.5c29ef88.jpg"
+    "static/css/main.e650577d.chunk.css.map": "/rick_and_morty_bd/static/css/main.e650577d.chunk.css.map",
+    "static/js/2.213f4e41.chunk.js.LICENSE.txt": "/rick_and_morty_bd/static/js/2.213f4e41.chunk.js.LICENSE.txt",
+    "static/media/RickMorty.jpg": "/rick_and_morty_bd/static/media/RickMorty.c3beabde.jpg",
+    "static/media/play-button.png": "/rick_and_morty_bd/static/media/play-button.411dfe07.png"
   },
   "entrypoints": [
     "static/js/runtime-main.4f9f685a.js",
-    "static/js/2.e778f608.chunk.js",
-    "static/css/main.9fe49c5f.chunk.css",
-    "static/js/main.fd0e1909.chunk.js"
+    "static/js/2.213f4e41.chunk.js",
+    "static/css/main.e650577d.chunk.css",
+    "static/js/main.e9ac77e4.chunk.js"
   ]
 }
